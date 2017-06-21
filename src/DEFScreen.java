@@ -51,19 +51,19 @@ public class DEFScreen extends javax.swing.JFrame {
         buttonGroup1 = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        DirToScan_btn = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        jRadioButton1 = new javax.swing.JRadioButton();
+        dos5_radioBtn = new javax.swing.JRadioButton();
         jLabel2 = new javax.swing.JLabel();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
+        dos10_radioBtn = new javax.swing.JRadioButton();
+        dos20_radioBtn = new javax.swing.JRadioButton();
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jInternalFrame1 = new javax.swing.JInternalFrame();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jTextField2 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
+        Main_textArea = new javax.swing.JTextArea();
+        Status_txtF = new javax.swing.JTextField();
+        About_btn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Delete Empty Folders ");
@@ -81,41 +81,41 @@ public class DEFScreen extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Network-Utility-icon - Copy.png"))); // NOI18N
-        jButton1.setText("Click to choose directory");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        DirToScan_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Network-Utility-icon - Copy.png"))); // NOI18N
+        DirToScan_btn.setText("Click to choose directory");
+        DirToScan_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                DirToScan_btnActionPerformed(evt);
             }
         });
 
-        buttonGroup1.add(jRadioButton1);
-        jRadioButton1.setSelected(true);
-        jRadioButton1.setText("5");
-        jRadioButton1.setBorderPainted(true);
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup1.add(dos5_radioBtn);
+        dos5_radioBtn.setSelected(true);
+        dos5_radioBtn.setText("5");
+        dos5_radioBtn.setBorderPainted(true);
+        dos5_radioBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                dos5_radioBtnActionPerformed(evt);
             }
         });
 
         jLabel2.setText("Depth of scan");
 
-        buttonGroup1.add(jRadioButton2);
-        jRadioButton2.setText("10");
-        jRadioButton2.setBorderPainted(true);
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup1.add(dos10_radioBtn);
+        dos10_radioBtn.setText("10");
+        dos10_radioBtn.setBorderPainted(true);
+        dos10_radioBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
+                dos10_radioBtnActionPerformed(evt);
             }
         });
 
-        buttonGroup1.add(jRadioButton3);
-        jRadioButton3.setText("20");
-        jRadioButton3.setBorderPainted(true);
-        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup1.add(dos20_radioBtn);
+        dos20_radioBtn.setText("20");
+        dos20_radioBtn.setBorderPainted(true);
+        dos20_radioBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton3ActionPerformed(evt);
+                dos20_radioBtnActionPerformed(evt);
             }
         });
 
@@ -127,11 +127,11 @@ public class DEFScreen extends javax.swing.JFrame {
                 .addGap(14, 14, 14)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jRadioButton1)
+                .addComponent(dos5_radioBtn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButton2)
+                .addComponent(dos10_radioBtn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButton3)
+                .addComponent(dos20_radioBtn)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -139,10 +139,10 @@ public class DEFScreen extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton1)
+                    .addComponent(dos5_radioBtn)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton3)))
+                    .addComponent(dos10_radioBtn)
+                    .addComponent(dos20_radioBtn)))
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -175,13 +175,13 @@ public class DEFScreen extends javax.swing.JFrame {
 
         jInternalFrame1.setVisible(true);
 
-        jTextArea1.setEditable(false);
-        jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        jTextArea1.setLineWrap(true);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("This program deletes all the empty folders/directories from the selected location. \n\nDepth of scan determines to search the nested directories. Such as if depth of scan value is 5, this program will search and delete 5 level of nested directories.\n\nAn example of 5 level of empty folders/directories.\n\nDir1\n |_Dir2\n      |-Dir3\n         |-Dir4\n             |-Dir5\n\nThis was written in few hours, hence this program is not very user friendly. I highly recommend you to use on “Download” directory. It is not recommended to scan any system directories. \n\n\n\n\n\nIf you want to test, create multiple empty folders on desktop and run this program (Choose your desktop in location) and see :) \n\nI personally has been using this, so far my mac is working fine. However, I do not take any responsibilities for any loss or damage of your data. Hence: This software is given 'as it is'!\n\n\n~Ritesh Gaur\n");
-        jScrollPane1.setViewportView(jTextArea1);
+        Main_textArea.setEditable(false);
+        Main_textArea.setColumns(20);
+        Main_textArea.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        Main_textArea.setLineWrap(true);
+        Main_textArea.setRows(5);
+        Main_textArea.setText("This program deletes all the empty folders/directories from the selected location. \n\nDepth of scan determines to search the nested directories. Such as if depth of scan value is 5, this program will search and delete 5 level of nested directories.\n\nAn example of 5 level of empty folders/directories.\n\nDir1\n |_Dir2\n      |-Dir3\n         |-Dir4\n             |-Dir5\n\nThis was written in few hours, hence this program is not very user friendly. I highly recommend you to use on “Download” directory. It is not recommended to scan any system directories. \n\n\n\n\n\nIf you want to test, create multiple empty folders on desktop and run this program (Choose your desktop in location) and see :) \n\nI personally has been using this, so far my mac is working fine. However, I do not take any responsibilities for any loss or damage of your data. Hence: This software is given 'as it is'!\n\n\n~Ritesh Gaur\n");
+        jScrollPane1.setViewportView(Main_textArea);
 
         javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
         jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
@@ -197,15 +197,15 @@ public class DEFScreen extends javax.swing.JFrame {
             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 310, Short.MAX_VALUE)
         );
 
-        jTextField2.setEditable(false);
-        jTextField2.setBackground(new java.awt.Color(238, 238, 238));
-        jTextField2.setText("Ready");
-        jTextField2.setBorder(null);
+        Status_txtF.setEditable(false);
+        Status_txtF.setBackground(new java.awt.Color(238, 238, 238));
+        Status_txtF.setText("Ready");
+        Status_txtF.setBorder(null);
 
-        jButton2.setText("About");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        About_btn.setText("About");
+        About_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                About_btnActionPerformed(evt);
             }
         });
 
@@ -223,9 +223,9 @@ public class DEFScreen extends javax.swing.JFrame {
                                 .addGap(18, 18, 18))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Status_txtF, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton2)
+                                .addComponent(About_btn)
                                 .addGap(130, 130, 130)))
                         .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
@@ -233,7 +233,7 @@ public class DEFScreen extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1)
+                        .addComponent(DirToScan_btn)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
@@ -248,7 +248,7 @@ public class DEFScreen extends javax.swing.JFrame {
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1)))
+                            .addComponent(DirToScan_btn)))
                     .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(12, 12, 12)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -256,8 +256,8 @@ public class DEFScreen extends javax.swing.JFrame {
                         .addComponent(jInternalFrame1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton2))
+                            .addComponent(Status_txtF, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(About_btn))
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addGap(125, 125, 125)
@@ -267,64 +267,67 @@ public class DEFScreen extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void DirToScan_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DirToScan_btnActionPerformed
         count = 0;
-        jTextField2.setText("Ready....");
-        jTextArea1.setText(" ");
+        Status_txtF.setText("Ready....");
+        Main_textArea.setText(" ");
         
         JFileChooser Fc = new JFileChooser();
         Fc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
         int returnVal = Fc.showOpenDialog(DEFScreen.this);
        
         if (returnVal == JFileChooser.APPROVE_OPTION) {
-            jTextField2.setText("Scanning now....");
+            Status_txtF.setText("Scanning now....");
         
             JOptionPane.showMessageDialog(this,"\"Scanning the given location, this might take sometime. Program will not respond during the scan! \"");
            
-            jTextArea1.setText(Fc.getSelectedFile().toString()); 
+            Main_textArea.setText(Fc.getSelectedFile().toString()); 
             
             directoryNametoScan = Fc.getSelectedFile().toString();
              
-            jTextArea1.setText("Scanning directory: " + Fc.getSelectedFile().toString());
+            Main_textArea.setText("Scanning directory: " + Fc.getSelectedFile().toString());
             
             ScanEmptyDir(directoryNametoScan);
-            jTextField2.setText("Finish Scanning...");
+            Status_txtF.setText("Finish Scanning...");
            
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_DirToScan_btnActionPerformed
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+    //dos5 = depth of scan =5
+    private void dos5_radioBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dos5_radioBtnActionPerformed
         // TODO add your handling code here:
 
        
         dept = 5;
        
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    }//GEN-LAST:event_dos5_radioBtnActionPerformed
 
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+    //dos10 = depth of scan =10
+    private void dos10_radioBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dos10_radioBtnActionPerformed
         // TODO add your handling code here:
         
         dept = 10;
        
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
+    }//GEN-LAST:event_dos10_radioBtnActionPerformed
 
-    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
+    //dos20 = depth of scan =20
+    private void dos20_radioBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dos20_radioBtnActionPerformed
       
         dept = 20;
       
-    }//GEN-LAST:event_jRadioButton3ActionPerformed
+    }//GEN-LAST:event_dos20_radioBtnActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         count = 0;
-        jTextField2.setText("Scaning now.....");
+        Status_txtF.setText("Scaning now.....");
         ScanEmptyDir(jTextField1.getText());
-        jTextField2.setText("Scaning finish!");
+        Status_txtF.setText("Scaning finish!");
     }//GEN-LAST:event_jTextField1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void About_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_About_btnActionPerformed
    JOptionPane.showMessageDialog(this,"DeF, By Ritesh Gaur, Version 1.0");
           
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_About_btnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -362,23 +365,24 @@ public class DEFScreen extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton About_btn;
+    private javax.swing.JButton DirToScan_btn;
+    public static javax.swing.JTextArea Main_textArea;
+    public static javax.swing.JTextField Status_txtF;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JRadioButton dos10_radioBtn;
+    private javax.swing.JRadioButton dos20_radioBtn;
+    private javax.swing.JRadioButton dos5_radioBtn;
     private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JScrollPane jScrollPane1;
-    public static javax.swing.JTextArea jTextArea1;
     public static javax.swing.JTextField jTextField1;
-    public static javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
+//Method to scan empty directories    // End of variables declaration                   
 //Method to scan empty directories    
 
     public static void ScanEmptyDir(String DIRname) {
@@ -388,7 +392,7 @@ public class DEFScreen extends javax.swing.JFrame {
                // jTextField2.setText("Scaning ......");
                 Path startPath = Paths.get(DIRname);
                 if (startPath.isAbsolute() == false) {                   // System.out.println(startPath.isAbsolute()); 
-                    jTextArea1.setText("Location doesn't exsist");
+                    Main_textArea.setText("Location doesn't exsist");
                     i = 1;
                     break;
 
@@ -398,9 +402,9 @@ public class DEFScreen extends javax.swing.JFrame {
                     @Override
                     public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) throws IOException {
                         if (dir == null) {
-                            jTextField2.setText("Path is null..leaving now...");
+                            Status_txtF.setText("Path is null..leaving now...");
                            // System.out.println("Path is null..leaving now...");
-                            jTextArea1.setText("Path is null.. leaving now...");
+                            Main_textArea.setText("Path is null.. leaving now...");
                             System.exit(0);
                         }
                         removeFileAndParentsIfEmpty(dir);
@@ -411,7 +415,7 @@ public class DEFScreen extends javax.swing.JFrame {
                     @Override
                     public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) {
                        // jTextField2.setText("Scaning ......");
-                        jTextArea1.append(newline + "Directory Scanned : " + file.getParent());
+                        Main_textArea.append(newline + "Directory Scanned : " + file.getParent());
                         return FileVisitResult.CONTINUE;
                     }
 
@@ -427,7 +431,7 @@ public class DEFScreen extends javax.swing.JFrame {
         
        
        // jTextField2.setText("Scaning finish!");
-        jTextArea1.append(newline + "DONE! -------- " + newline + count + " ------ empty directories are deleted!");
+        Main_textArea.append(newline + "DONE! -------- " + newline + count + " ------ empty directories are deleted!");
         
         JOptionPane.showMessageDialog(null, count + " Empty directories are found & deleted in depth of " + dept, "End of task", JOptionPane.INFORMATION_MESSAGE);
  
@@ -463,7 +467,7 @@ public class DEFScreen extends javax.swing.JFrame {
                 //  catch (DirectoryNotEmptyException e ) {
                 // System.out.println("Dir not emplty" + Files.getFileStore(path)+ e);
               
-                jTextArea1.append(newline + "************ DIR NOT EMPTY: " + path.getFileName());
+                Main_textArea.append(newline + "************ DIR NOT EMPTY: " + path.getFileName());
                 
                 return;
             }
