@@ -1,5 +1,6 @@
 
 import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 /*
  * To change this template, choose Tools | Templates
@@ -22,7 +23,7 @@ public class DEF {
         UIManager.setLookAndFeel(
             UIManager.getSystemLookAndFeelClassName());
     } 
-    catch (Exception exp) {}
+    catch (  ClassNotFoundException | IllegalAccessException | InstantiationException | UnsupportedLookAndFeelException exp) {}
         DEFScreen obj = new DEFScreen();
         obj.setVisible(true);
   

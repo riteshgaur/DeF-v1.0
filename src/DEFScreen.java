@@ -355,6 +355,7 @@ public class DEFScreen extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new DEFScreen().setVisible(true);
             }
@@ -394,6 +395,7 @@ public class DEFScreen extends javax.swing.JFrame {
                 }
 
                 Files.walkFileTree(startPath, new SimpleFileVisitor<Path>() {
+                    @Override
                     public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) throws IOException {
                         if (dir == null) {
                             jTextField2.setText("Path is null..leaving now...");
@@ -413,14 +415,13 @@ public class DEFScreen extends javax.swing.JFrame {
                         return FileVisitResult.CONTINUE;
                     }
 
+                    @Override
                     public FileVisitResult visitFileFailed(Path file, IOException e) {
 
                         return FileVisitResult.CONTINUE;
                     }
                 });
             } catch (IOException e) {
-                e.printStackTrace();
-                
             }
         }
         
@@ -458,7 +459,7 @@ public class DEFScreen extends javax.swing.JFrame {
                 count++;
                 
                
-            } catch (Exception e) {
+            } catch (IOException e) {
                 //  catch (DirectoryNotEmptyException e ) {
                 // System.out.println("Dir not emplty" + Files.getFileStore(path)+ e);
               
