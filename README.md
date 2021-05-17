@@ -1,6 +1,10 @@
 # DeF-v1.0
 Delete Empty Folders
 
+
+![APP Screenshot](/DEF.png)
+
+
 This program deletes all the empty folders/directories from the selected location. 
 
 Depth of scan determines to search the nested directories. Such as if depth of scan value is 5, this program will search and delete 5 level of nested directories.
